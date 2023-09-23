@@ -58,6 +58,10 @@ class NotImplementedWindow extends DesktopWindow {
     throw UnimplementedError('hide() has not been implemented.');
   }
 
+  void presentWindow() {
+    throw UnimplementedError('presentWindow() has not been implemented.');
+  }
+
   @Deprecated("use isVisible instead")
   bool get visible {
     return isVisible;
