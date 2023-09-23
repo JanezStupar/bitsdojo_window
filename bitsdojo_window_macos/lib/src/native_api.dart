@@ -45,6 +45,11 @@ typedef Void THideWindow(IntPtr window);
 typedef DHideWindow = void Function(int window);
 final DShowWindow hideWindow = _publicAPI.ref.hideWindow.asFunction();
 
+// presentWindow
+typedef Void TPresentWindow(IntPtr window);
+typedef DPresentWindow = void Function(int window);
+final DPresentWindow presentWindow = _theAPI.ref.presentWindow.asFunction();
+
 // moveWindow
 typedef Void TMoveWindow(IntPtr window);
 typedef DMoveWindow = void Function(int window);
@@ -170,6 +175,7 @@ sealed class BDWPublicAPI extends Struct {
       setInsideDoWhenWindowReady;
   external Pointer<NativeFunction<TShowWindow>> showWindow;
   external Pointer<NativeFunction<THideWindow>> hideWindow;
+  external Pointer<NativeFunction<TShowWindow>> presentWindow;
   external Pointer<NativeFunction<TMoveWindow>> moveWindow;
   external Pointer<NativeFunction<TSetSize>> setSize;
   external Pointer<NativeFunction<TSetMinSize>> setMinSize;

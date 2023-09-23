@@ -248,6 +248,10 @@ class WinWindow extends WinDesktopWindow {
         handle!, 0, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE | SWP_HIDEWINDOW);
   }
 
+  void presentWindow() {
+    throw UnimplementedError('presentWindow() has not been implemented.');
+  }
+
   @Deprecated("use show()/hide() instead")
   set visible(bool isVisible) {
     if (isVisible) {

@@ -203,6 +203,10 @@ class MacOSWindow extends DesktopWindow {
     hideWindow(handle!);
   }
 
+  void presentWindow() {
+    throw UnimplementedError('presentWindow() has not been implemented.');
+  }
+
   void close() {
     if (!isValidHandle(handle, "close")) return;
     closeWindow(handle!);
