@@ -48,7 +48,7 @@ final DShowWindow hideWindow = _publicAPI.ref.hideWindow.asFunction();
 // presentWindow
 typedef Void TPresentWindow(IntPtr window);
 typedef DPresentWindow = void Function(int window);
-final DPresentWindow presentWindow = _theAPI.ref.presentWindow.asFunction();
+final DPresentWindow presentWindow = _publicAPI.ref.presentWindow.asFunction();
 
 // moveWindow
 typedef Void TMoveWindow(IntPtr window);
