@@ -72,6 +72,11 @@ typedef Void THideWindow(IntPtr window);
 typedef DHideWindow = void Function(int window);
 final DHideWindow hideWindow = _theAPI.ref.hideWindow.asFunction();
 
+// presentWindow
+typedef Void TPresentWindow(IntPtr window);
+typedef DPresentWindow = void Function(int window);
+final DPresentWindow presentWindow = _theAPI.ref.presentWindow.asFunction();
+
 // maximizeWindow
 typedef Void TMinimizeWindow(IntPtr window);
 typedef DMinimizeWindow = void Function(int window);
@@ -106,6 +111,7 @@ final DSetWindowTitle setWindowTitle = _theAPI.ref.setWindowTitle.asFunction();
   external Pointer<NativeFunction<TSetMaxSize>> setMaxSize;
   external Pointer<NativeFunction<TShowWindow>> showWindow;
   external Pointer<NativeFunction<THideWindow>> hideWindow;
+  external Pointer<NativeFunction<TShowWindow>> presentWindow;
   external Pointer<NativeFunction<TMinimizeWindow>> minimizeWindow;
   external Pointer<NativeFunction<TMaximizeWindow>> maximizeWindow;
   external Pointer<NativeFunction<TUnmaximizeWindow>> unmaximizeWindow;

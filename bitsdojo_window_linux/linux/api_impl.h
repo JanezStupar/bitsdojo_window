@@ -28,7 +28,7 @@ namespace bitsdojo_window {
 
     typedef void (*TSetMinSize)(GtkWindow*, int, int);
     void setMinSize(GtkWindow* window, int width, int height);
-    
+
     typedef void (*TSetMaxSize)(GtkWindow*, int, int);
     void setMaxSize(GtkWindow* window, int width, int height);
 
@@ -38,11 +38,14 @@ namespace bitsdojo_window {
     typedef void (*THideWindow)(GtkWindow*);
     void hideWindow(GtkWindow* window);
 
+    typedef void (*TShowWindow)(GtkWindow*);
+    void presentWindow(GtkWindow* window);
+
     typedef void (*TMinimizeWindow)(GtkWindow*);
-    void minimizeWindow(GtkWindow* window); 
+    void minimizeWindow(GtkWindow* window);
 
     typedef void (*TMaximizeWindow)(GtkWindow*);
-    void maximizeWindow(GtkWindow* window);  
+    void maximizeWindow(GtkWindow* window);
 
     typedef void (*TUnmaximizeWindow)(GtkWindow*);
     void unmaximizeWindow(GtkWindow* window);

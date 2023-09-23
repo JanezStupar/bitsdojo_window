@@ -17,6 +17,9 @@ final gtkWindowGetScreen = _libgtk.lookupFunction<
     IntPtr Function(IntPtr window),
     int Function(int window)>('gtk_window_get_screen');
 
+final gtkWindowPresentWithTime = _libgtk.lookupFunction<IntPtr Function(IntPtr widget),
+    int Function(int widget)>('gtk_window_present_with_time');
+
 final gdkScreenGetDisplay = _libgtk.lookupFunction<
     IntPtr Function(IntPtr screen),
     int Function(int screen)>('gdk_screen_get_display');

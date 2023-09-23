@@ -34,6 +34,7 @@ abstract class DesktopWindow {
   void maximize();
   void maximizeOrRestore();
   void restore();
+  void presentWindow();
 
   void startDragging();
 

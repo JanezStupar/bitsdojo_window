@@ -280,6 +280,12 @@ class GtkWindow extends DesktopWindow {
     native.hideWindow(handle!);
   }
 
+  @override
+  void presentWindow() {
+    if (!isValidHandle(handle, "presentWindow")) return;
+    native.presentWindow(handle!);
+  }
+
   @Deprecated("use show()/hide() instead")
   @override
   set visible(bool isVisible) {

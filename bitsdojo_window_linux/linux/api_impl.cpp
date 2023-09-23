@@ -149,6 +149,15 @@ void showWindow(GtkWindow* window) {
     g_idle_add_full(G_PRIORITY_HIGH_IDLE, showWindowProc, window, NULL);
 }
 
+static gboolean presentWindowProc(gpointer data) {
+    gtk_window_present_with_time(window, gtk_get_current_event_time());
+}
+
+void presentWindow(GtkWindow* window) {
+    GtkWindow* window = reinterpret_cast<GtkWindow*>(data);
+    g_idle_add_full(G_PRIORITY_HIGH_IDLE, presentWindowProc, window, NULL);
+}
+
 static gboolean hideWindowProc(gpointer data) {
     GtkWindow* window = reinterpret_cast<GtkWindow*>(data);
     gtk_widget_hide(GTK_WIDGET(window));
